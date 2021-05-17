@@ -1,32 +1,25 @@
-let creditCost;
-var countryInput = prompt('Введите название страны, в которую осуществляете доставку');
-switch (countryInput){
-    case 'Китай':
-        creditCost = 100;
-        console.log(creditCost);
-        // console.log('Доставка в ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        alert('Доставка в государство ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        break;
-    case 'Чили':
-        creditCost = 250;
-        // console.log('Доставка в ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        alert('Доставка в государство ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        break;
-    case 'Австралия':
-        creditCost = 170;
-        // console.log('Доставка в ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        alert('Доставка в государство ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        break;
-    case 'Индия':
-        creditCost = 80;
-        // console.log('Доставка в ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        alert('Доставка в государство ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        break;
-    case 'Ямайка':
-        creditCost = 120;
-        // console.log('Доставка в ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        alert('Доставка в государство ' + countryInput + ' будет стоить ' + creditCost +' кредитов');
-        break;
-    default:
-        alert('В вашей стране доставка не доступна');
+const countryInput = prompt('Введите название страны, в которую осуществляете доставку');
+const countryCapitalized = countryInput.charAt(0).toUpperCase() + countryInput.slice(1).toLowerCase();
+const countryTemp = countryCapitalized;
+function getCreditCost(price){
+    return alert('Доставка в государство ' + countryCapitalized + ' будет стоить ' + price +' кредитов');
 }
+switch (countryTemp){
+    case 'Китай':
+        getCreditCost(100);
+        break;
+        case 'Чили':
+            getCreditCost(80);
+            break;
+            case 'Австралия':
+        break;
+        case 'Индия':
+            getCreditCost(300);
+            break;
+            case 'Ямайка':
+            getCreditCost(120);
+        break;
+        default:
+            alert('В вашей стране доставка не доступна');
+        }
+        

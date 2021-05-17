@@ -1,6 +1,7 @@
 const ADMIN_PASSWORD = 'jqueryismyjam';
-var message;
-var dialogue = prompt("Введіть пароль");
+let message;
+let dialogue = prompt("Введіть пароль");
+dialogue = dialogue.toLocaleLowerCase();
 // console.log(dialogue);
 if (dialogue == null){
         message = 'Скасовано користувачем!';
